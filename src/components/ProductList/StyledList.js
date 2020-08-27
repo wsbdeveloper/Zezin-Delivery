@@ -40,6 +40,7 @@ export const StyledList = Styled.div`
                     box-sizing:content-box;
                     margin: 50px 0;
                     background-color:#FFF;
+                    cursor:pointer;
                     border:1px solid #fff;
                     border-radius:10px;
                     grid-template-columns: auto auto auto auto;

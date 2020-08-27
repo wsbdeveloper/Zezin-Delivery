@@ -6,6 +6,8 @@ import { Link } from 'react-router-dom';
 
 import Footer from '../../pages/Footer/Footer';
 
+import { useHistory } from 'react-router-dom'
+
 import { StyledList } from './../ProductList/StyledList';
 
 import { useQuery, gql } from '@apollo/client';
@@ -14,7 +16,8 @@ import { useQuery, gql } from '@apollo/client';
 
 export default function ProductsCategory(props) {
     const [productsList,setProductsList] = useState([]);
-    console.log(props.match.params.category);
+    const history = useHistory();
+    
     const Products = gql`
         query poc($id: ID!, $categoryId: Int, $search: String){
             poc(id: $id) {
@@ -84,12 +87,14 @@ export default function ProductsCategory(props) {
                                     products?.data?.poc?.products?.length === 0 ? <b>Não há Produtos disponiveis no momento!</b> :
                                     products?.data?.poc?.products.map((data,index) => {
                                         return(
-                                            <div key={data?.title} className="list-products">
+                                            <div key={data?.title} className="list-products" onClick={ () => history.push("/produto",{
+                                                title : data?.title,
+                                                idProduct : data?.id,
+                                                price : data?.productVariants[0].price,
+                                                imageProduct : data?.images[0]?.url
+                                            })}>
                                                 <img alt="Zé Delivery" src={productsList[index]?.images[0]?.url} className="css-mtwe98-productImage"/>
                                                 <hr></hr>
-                                                {
-                                                    console.log(productsList[index]?.images[0]?.url)
-                                                }
                                                 <div className="describe-products">
                                                     <h3>{data?.title}</h3>
                                                     <span className="price-product">R$ {data?.productVariants[0]?.price.toLocaleString('pt-BR',{minimumFractionDigits: 2})}</span>
