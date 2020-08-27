@@ -27,6 +27,10 @@ export const StyledProduct = Styled.div`
         border: 1px solid #b1b1b1;
         border-radius: 5px;
         box-shadow: 4px 5px 7px #b7b7b7;
+
+        @media(max-width:700px){
+            grid-template-columns:100%;
+        }
     
         div.product-image{
 
@@ -40,6 +44,9 @@ export const StyledProduct = Styled.div`
             
             h3{
                 font-size:32px;
+                @media(max-width:700px){
+                    font-size:25px;
+                }
             }
 
             p.price{
@@ -49,6 +56,9 @@ export const StyledProduct = Styled.div`
             > div{
                 height: 100%;
                 padding: 3em 0;
+                @media(max-width:700px){
+                    text-align:center;
+                }
 
 
                 button{

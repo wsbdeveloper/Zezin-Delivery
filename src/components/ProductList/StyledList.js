@@ -82,13 +82,15 @@ export const StyledList = Styled.div`
             }
 
             div.products{
-                height: 277px;
+                overflow:auto;
                 background-color: #fff;
                 width: 92%;
+                height:400px;
                 margin: 1em auto;
                 display: flex;
-                padding: 1em;
+                padding: 0 2em;
                 position: relative;
+                justify-content: center;
                 flex-direction: column;
             
 
@@ -97,12 +99,15 @@ export const StyledList = Styled.div`
                     style para produtos exibidos na home
                  */
                 div.grid-list-products{
-                    display: inline-flex;
-                    justify-content: space-around;
                     height: 90%;
                     margin-top:10px;
                     height: 165px;
                     align-items: center;
+                    display: grid;
+                    grid-template-columns: auto auto auto auto auto;
+                    justify-content: center;
+                    column-gap: 40px;
+                    row-gap: 26px;
                 }
                 h2{
                     font-size:15px;
