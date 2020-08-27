@@ -3,16 +3,10 @@ import Styled from 'styled-components';
 
 export const StyledHomeMain = Styled.div`
     div.grid-home-main{
-        height: 500px;
-        background-size: auto 700px;
-        background-image: url("https://courier-images-web.imgix.net/static/img/img-welcome-bg.png?auto=compress,format&fit=max&w=undefined&h=undefined&dpr=2&fm=png");
-        
-        background-repeat: no-repeat;
-        background-position: bottom left;
-        
         
         section{
             height:100%;
+            height:500px;
             display:flex;
             align-items:center;
             justify-content:center;
@@ -20,6 +14,12 @@ export const StyledHomeMain = Styled.div`
             flex-direction: column;
             font-weight:900;
             padding:1em;
+
+            background-size: auto auto;
+            background-image: url("https://courier-images-web.imgix.net/static/img/img-welcome-bg.png?auto=compress,format&fit=max&w=undefined&h=undefined&dpr=2&fm=png");
+            
+            background-repeat: no-repeat;
+            background-position: bottom left;
 
             h1{
                 @media(max-width:600px){
@@ -29,38 +29,48 @@ export const StyledHomeMain = Styled.div`
                 font-size: 43px;
                 margin: 0 0 30px;
                 width: 50%;
-                color:#11111b;
+                color:var(--color-title);
                 
             }
 
             h2{
+                color:var(--color-title);
                 b{
                     color:#ffcc00;
                 }
             }
             div.localization{
                 width:60%;
+                height: 400px;
+                form{
 
-                input{
-                    width: 70%;
-                    height: 40px;
-                    border: 2px solid #b7b9ba;
-                    border-radius: 6px;
-                    padding: 0 1em;
-                    font-size:18px;
-                    margin: 3em auto;
+                    input{
+                        width: 70%;
+                        height: 40px;
+                        border: 2px solid #b7b9ba;
+                        border-radius: 6px;
+                        padding: 0 1em;
+                        font-size:18px;
+                        margin: 3em auto;
 
-                    @media(max-width:600px){
-                        width: 100%;
+                        @media(max-width:600px){
+                            width: 100%;
+                        }
+
+                        &:focus{
+                            border:#b7b9ba;
+                        }
                     }
 
-                    &:focus{
-                        border:#b7b9ba;
+                    button{
+                        padding: 0.5em;
+                        border: 1px solid #cbcfd0;
+                        border-radius: 5px;
+                        background-color: #fc09;
+                        cursor: pointer;
                     }
-
                 }
             }
-
         }
 
         div.products-category{
@@ -85,7 +95,7 @@ export const StyledHomeMain = Styled.div`
                     grid-column-gap: 50px;
                     overflow: auto;
                     padding: 2em 0;
-
+                    
                     @media(max-width:900px){
                         grid-template-columns: none;
                     }
@@ -148,8 +158,7 @@ export const StyledHomeMain = Styled.div`
                     }
                     div.list-category{
                         height:60px;
-                        width:300px;
-                        background:#F5F5F5;
+                        background:var(--color-background-categories);
                         border-radius:8px;
 
                         display: flex;
@@ -157,6 +166,7 @@ export const StyledHomeMain = Styled.div`
 
                         img{
                             width:30px;
+                            
                             margin: 0 9px;
                         }
                     }

@@ -21,5 +21,8 @@ export default createGlobalStyle`
         --color-background: rgb(211 211 211 / 67%);
         --color-header: #1D1D1D;
         --color-title: #333;
+        --color-footer: #1d1d1d;
+        --color-font-footer:#f4f4f4f4;
+        --color-background-categories: #F5F5F5;
     }
 `;
