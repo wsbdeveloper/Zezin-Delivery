@@ -17,7 +17,7 @@ import { useQuery, gql } from '@apollo/client';
 export default function ProductsCategory(props) {
     const [productsList,setProductsList] = useState([]);
     const history = useHistory();
-    
+
     const Products = gql`
         query poc($id: ID!, $categoryId: Int, $search: String){
             poc(id: $id) {

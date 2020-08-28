@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 
 import { createStore } from 'redux';
 
-import rootReducer from './reducers/index';
+import rootReducer from './store/index';
 
 const store = createStore(rootReducer);
 
