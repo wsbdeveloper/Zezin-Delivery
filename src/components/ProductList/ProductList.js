@@ -12,6 +12,8 @@ import { StyledList } from './StyledList';
 
 import { useHistory } from 'react-router-dom';
 
+import { connect } from 'react-redux'
+
 
 // Component responsável pela apresentação dos primeiros produtos retornados da api.
 

@@ -6,14 +6,10 @@ import App from './components/App';
 
 import { Provider } from 'react-redux';
 
-import { createStore } from 'redux';
-
-import rootReducer from './store/index';
-
-const store = createStore(rootReducer);
+import storeGlobal from './store/index';
 
 ReactDOM.render(
-    <Provider store={store}>
+    <Provider store={storeGlobal}>
         <App />
     </Provider>, 
 document.getElementById("app"))

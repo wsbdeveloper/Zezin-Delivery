@@ -88,12 +88,13 @@ export const StyledList = Styled.div`
                 width: 92%;
                 height:400px;
                 margin: 1em auto;
-                display: flex;
                 padding: 0 2em;
                 position: relative;
-                justify-content: center;
-                flex-direction: column;
-            
+                
+
+                @media(max-width:600px){
+                    margin: 3em auto;
+                }
 
                 /**
                 
@@ -109,6 +110,10 @@ export const StyledList = Styled.div`
                     justify-content: center;
                     column-gap: 40px;
                     row-gap: 26px;
+
+                    @media(max-width: 600px){
+                        grid-template-columns: auto auto;
+                    }
                 }
                 h2{
                     font-size:15px;
@@ -128,7 +133,9 @@ export const StyledList = Styled.div`
                 align-items: center;
                 flex-direction: column;
                 font-size: 13px;
-
+                @media(max-width: 600px){
+                    width: auto;
+                }
 
                 div.describe-products{
                     height: 100%;

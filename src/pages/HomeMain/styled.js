@@ -154,7 +154,8 @@ export const StyledHomeMain = Styled.div`
                     justify-content: center;
                     grid-template-columns:repeat(3,200px);
                     @media(max-width:900px){
-                        grid-template-columns: none;
+                        grid-template-columns: auto auto;
+                        grid-column-gap: 40px;
                     }
                     div.list-category{
                         height:60px;

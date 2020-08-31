@@ -33,9 +33,12 @@ export const StyledProduct = Styled.div`
         }
     
         div.product-image{
-
+            display: flex;
+            justify-content: center;
+            align-items: center;
             img{
-                width: 80%;
+                width: auto;
+                margin: 3em;
             }
         }
 

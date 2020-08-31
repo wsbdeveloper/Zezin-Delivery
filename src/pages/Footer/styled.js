@@ -27,7 +27,6 @@ export const StyledFooter = Styled.div`
                 flex-direction: column;
                 line-height: 3;
                 align-items: center;
-                text-align: center;
             }
 
             a{
@@ -52,15 +51,6 @@ export const StyledFooter = Styled.div`
                     }
                 }
             }
-
-            div.about-us{
-
-            }
-
-            div.partners{
-
-            }
-
             div.app-mobile{
                 ul{
                     li{
