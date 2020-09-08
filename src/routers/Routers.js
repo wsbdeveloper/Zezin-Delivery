@@ -8,6 +8,8 @@ import ProductsCategorys from '../components/ProductsCategorys/ProductsCategorys
 
 import Product from './../components/Product/Product';
 
+import Teste from './../components/BagForProducts/index';
+
 import {
     BrowserRouter as Routers,
     Route,
@@ -23,6 +25,7 @@ export default function Router() {
                 <Route path="/produtos" component={ProductsHome} />
                 <Route path="/categoria/:category" component={ProductsCategorys} />
                 <Route path="/produto" component={Product} />
+                <Route path="/teste" component={Teste} />
             </Switch>
         </Routers>
     );
