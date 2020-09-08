@@ -27,10 +27,4 @@ Web-app para representação do fluxo do zé delivery poc.
     http://localhost:5000
     ```
 
-## Agradecimentos
-
-Agradeço pela oportunidade e tenho uma grande vontade de participar do time, evoluir cada vez mais!!
-
-- [gitlab](https://gitlab.com/WSBgitlab)
-
-Obrigado.
+Clone Try.

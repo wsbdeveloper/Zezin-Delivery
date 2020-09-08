@@ -20,6 +20,7 @@ import {
 export default function Router() {
     return (
         <Routers>
+            
             <Switch>
                 <Route path="/" exact component={Home} />
                 <Route path="/produtos" component={ProductsHome} />
